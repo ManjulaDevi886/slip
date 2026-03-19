@@ -932,3 +932,364 @@ body {
   background: #333;
   border: 1px solid #444;
 }
+
+/* ===== Header Top Row (logo + UAN/PF) ===== */
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header-left-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+/* ===== Payslip Month Title ===== */
+.payslip-month-title {
+  margin-top: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  padding-left: 100px; /* logo (80px) + gap (20px) — aligns with address start */
+}
+
+.month-year-select {
+  border: none;
+  border-bottom: 1px dashed #aaa;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-family: inherit;
+  padding: 0 4px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.month-year-select:focus {
+  background: #fefce8;
+  border-bottom-color: #eab308;
+}
+
+/* ===== Earnings & Deductions Section Header ===== */
+.ed-section-header {
+  background-color: #f3f4f6;
+  padding: 10px 16px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 0;
+}
+
+.ed-divider {
+  border: none;
+  border-top: 1px solid #d1d5db;
+  margin: 0 0 0 0;
+}
+
+/* Corporate Payslip Styles */
+.corporate-payslip-wrapper {
+  background: #f3f4f6;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.corporate-payslip {
+  font-family: "Times New Roman", Times, serif;
+  width: 210mm;
+  min-height: 297mm;
+  padding: 40px !important;
+  background: white;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #000;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.corporate-payslip * {
+  box-sizing: border-box;
+}
+
+.payslip-header-corporate {
+  margin-bottom: 20px;
+}
+
+.header-flex-corporate {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-box-corporate {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #e5e7eb;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logo-img.corporate-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.fallback-logo-corporate {
+  background-color: #f1f5f9;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-title-corporate {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  color: #000;
+}
+
+.address-corporate {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+.corporate-divider {
+  border-top: 2px solid #e5e7eb;
+  margin: 20px 0;
+}
+
+.employee-details-corporate {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.details-col {
+  flex: 1;
+}
+
+.corporate-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.corporate-table td, .corporate-table th {
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #000;
+}
+
+.corporate-table th {
+  background-color: #fafafa;
+  font-weight: bold;
+  text-align: left;
+}
+
+.corp-label {
+  width: 40%;
+  color: #555;
+  background-color: #fafafa;
+}
+
+.corp-value {
+  width: 60%;
+  font-weight: bold;
+}
+
+.salary-section-corporate {
+  display: flex;
+  gap: 0;
+  margin-bottom: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.salary-col {
+  flex: 1;
+}
+
+.salary-col:first-child {
+  border-right: 1px solid #e5e7eb;
+}
+
+.salary-col .corporate-table td, .salary-col .corporate-table th {
+  border: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.salary-col .corporate-table tr:last-child td {
+  border-bottom: none;
+}
+
+.salary-header {
+  background-color: #fafafa;
+  padding: 10px 12px;
+  font-weight: bold;
+  font-size: 15px;
+  border-bottom: 1px solid #e5e7eb;
+  text-transform: uppercase;
+}
+
+.salary-header--center {
+  text-align: center;
+}
+
+/* Vertical divider between Description and Amount columns */
+.col-divider {
+  border-left: 2px solid #d1d5db !important;
+}
+
+.totals-section-corporate {
+  margin-bottom: 30px;
+}
+
+.totals-table td {
+  border: 1px solid #e5e7eb;
+}
+
+.tot-label {
+  font-weight: bold;
+  background-color: #fafafa;
+  width: 25%;
+}
+
+.tot-value {
+  width: 25%;
+  font-weight: bold;
+}
+
+.net-payable-row .net-label {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 20px;
+  background-color: #fafafa;
+}
+
+.net-payable-row .net-value {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.net-pay-banner {
+  background-color: #f4fcfa;
+  padding: 24px;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.net-pay-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.net-pay-subtitle {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 16px;
+}
+
+.net-pay-amount {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 12px;
+}
+
+.net-pay-words {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+}
+
+.corporate-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #999;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.corp-input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  width: 100%;
+}
+
+.btn-row-corp {
+  padding: 10px;
+  text-align: center;
+}
+
+.add-btn-corp {
+  background: none;
+  border: 1px dashed #bbf7d0;
+  color: #166534;
+  padding: 6px 15px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-btn-corp:hover {
+  background: #f0fdf4;
+}
+
+/* Ensure minimal-input works transparently in corporate theme */
+.corporate-payslip .minimal-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 4px;
+}
+
+.corporate-payslip .minimal-input:focus {
+  background: #fefce8;
+  outline: 1px solid #eab308;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+  .corporate-payslip-wrapper {
+    padding: 0;
+    background: white;
+    box-shadow: none;
+    display: block;
+  }
+  .corporate-payslip {
+    margin: 0;
+    padding: 0 !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    box-shadow: none;
+    border: none;
+  }
+  .btn-row-corp {
+    display: none !important;
+  }
+}
